@@ -46,6 +46,11 @@ namespace WarehouseManagementSystemAPI
             CustomQueueEvent(this, a);
         }
 
+        public IEnumerator<T> GetEnumerator()
+        {
+            return _queue.GetEnumerator();
+        }
+
     }
 
     public class QueueEventArgs : System.EventArgs
